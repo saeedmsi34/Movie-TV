@@ -1,0 +1,42 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+
+
+
+<div class="container">
+    <div class="row py-5 justify-content-center">
+        <div class="col-md-3">
+            <div>
+                <div class="brder w-25"></div>
+                <h2>
+                    Trending
+                    <br /> Movies
+                    <br /> to watch Now
+                </h2>
+                <p class="text-muted">Most watch movies by days</p>
+                <div class="brder w-75"></div>
+            </div>
+        </div>
+
+        <div *ngFor="let movie of trendingMovies" class="col-md-3 py-2">
+            <img class="w-100 rounded-3 shadow" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt=${`movie.title`}>
+
+            <h5 class="h6 py-2">{{movie.title}}</h5>
+            <button routerLink='/details/{{movie.id}}' class="btn btn-light">details</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+<nav aria-label="..." class="d-flex  align-items-center justify-content-center">
+    <ul class="pagination">
+
+        <li (click)="getTrendingMovies(1)" class="page-item"><a class="page-link">1</a></li>
+        <li (click)="getTrendingMovies(2)" class="page-item " aria-current="page">
+            <a class="page-link">2</a>
+        </li>
+        <li (click)="getTrendingMovies(3)" class="page-item"><a class="page-link">3</a></li>
+    </ul>
+</nav>

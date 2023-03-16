@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark p-4 fw-bold justify-content-between align-items-center mine ">
+    <div class="container-fluid">
+      <a class="navbar-brand logo me-5">Noxe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link " routerLink="home" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="movies" aria-current="page">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="tv" aria-current="page">Tv shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="people" aria-current="page">People</a>
+          </li>
+      
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" *ngIf='!isLogin' routerLink="register" aria-current="page">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf='!isLogin' routerLink="login" aria-current="page">Login</a>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" *ngIf='!isLogin' aria-current="page" (click)='logout()'>Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
